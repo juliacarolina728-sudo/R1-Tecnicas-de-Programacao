@@ -157,3 +157,11 @@ for (const i of personagens){
     }
 }
 console.log('Personagem mais resistente:', personagemResistente.nome);
+
+let personagemVencedor = personagens[0];
+for (const i of personagens){
+    if (i.forca + i.velocidade + i.resistencia > personagemVencedor.forca + personagemVencedor.velocidade + personagemVencedor.resistencia){
+        personagemVencedor = i;
+    }       
+}
+console.log('Personagem vencedor:', personagemVencedor.nome);
